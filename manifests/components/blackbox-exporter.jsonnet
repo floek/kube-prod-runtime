@@ -4,7 +4,7 @@ local kube = import "../vendor/github.com/bitnami-labs/kube-libsonnet/kube.libso
 local kubecfg = import "kubecfg.libsonnet";
 
 // Cluster-specific configuration
-local BLACKBOX_EXPORTER_IMAGE = "bitnami/blackbox-exporter:0.18.0-debian-10-r83";
+local BLACKBOX_EXPORTER_IMAGE = (import "images.json")["blackbox-exporter"];
 
 {
   local this = self,
