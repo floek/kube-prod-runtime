@@ -21,17 +21,17 @@ local kube = import "../vendor/github.com/bitnami-labs/kube-libsonnet/kube.libso
 local utils = import "../vendor/github.com/bitnami-labs/kube-libsonnet/utils.libsonnet";
 local version = import "../components/version.jsonnet";
 local cert_manager = import "../components/cert-manager.jsonnet";
-local pdns = import "../components/powerdns.jsonnet";
-local edns = import "../components/externaldns.jsonnet";
-local nginx_ingress = import "../components/nginx-ingress.jsonnet";
-local prometheus = import "../components/prometheus.jsonnet";
-local galera = import "../components/mariadb-galera.jsonnet";
-local keycloak = import "../components/keycloak.jsonnet";
-local oauth2_proxy = import "../components/oauth2-proxy.jsonnet";
+// local pdns = import "../components/powerdns.jsonnet";
+// local edns = import "../components/externaldns.jsonnet";
+// local nginx_ingress = import "../components/nginx-ingress.jsonnet";
+// local prometheus = import "../components/prometheus.jsonnet";
+// local galera = import "../components/mariadb-galera.jsonnet";
+// local keycloak = import "../components/keycloak.jsonnet";
+// local oauth2_proxy = import "../components/oauth2-proxy.jsonnet";
 local fluentd_es = import "../components/fluentd-es.jsonnet";
 local elasticsearch = import "../components/elasticsearch.jsonnet";
-local kibana = import "../components/kibana.jsonnet";
-local grafana = import "../components/grafana.jsonnet";
+// local kibana = import "../components/kibana.jsonnet";
+// local grafana = import "../components/grafana.jsonnet";
 
 {
   config:: error "no kubeprod configuration",
@@ -46,6 +46,7 @@ local grafana = import "../components/grafana.jsonnet";
 
   version: version,
 
+  /* 
   grafana: grafana {
     prometheus:: $.prometheus.prometheus.svc,
     ingress+: {
@@ -90,11 +91,14 @@ local grafana = import "../components/grafana.jsonnet";
     },
   },
 
+  */
+
   cert_manager: cert_manager {
     letsencrypt_contact_email:: $.letsencrypt_contact_email,
     letsencrypt_environment:: $.letsencrypt_environment,
   },
 
+  /* 
   nginx_ingress: nginx_ingress {
     local this = self,
     udpconf+: {
@@ -175,12 +179,15 @@ local grafana = import "../components/grafana.jsonnet";
     },
   },
 
+  */
+
   fluentd_es: fluentd_es {
     es:: $.elasticsearch,
   },
 
   elasticsearch: elasticsearch,
 
+  /* 
   kibana: kibana {
     es:: $.elasticsearch,
 
@@ -188,4 +195,5 @@ local grafana = import "../components/grafana.jsonnet";
       host: "kibana." + $.external_dns_zone_name,
     },
   },
+  */
 }
