@@ -164,8 +164,10 @@
     ],
     // Useful in Ingress rules
     name_port:: {
-      serviceName: service.metadata.name,
-      servicePort: service.spec.ports[0].port,
+      service: {
+        name: service.metadata.name,
+        port: service.spec.ports[0].port,
+      },
     },
 
     spec: {
@@ -312,7 +314,7 @@
   },
 
   HostPathVolume(path, type=""): {
-    hostPath: { path: path, type: type },
+    hostPath: { path: path, pathType: type },
   },
 
   GitRepoVolume(repository, revision): {
