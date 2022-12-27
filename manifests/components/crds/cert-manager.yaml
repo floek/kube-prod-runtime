@@ -1793,7 +1793,6 @@ spec:
               - invalid
               - expired
               - errored
-  version: v1alpha2
   versions:
   - name: v1alpha2
     served: true
@@ -3493,7 +3492,6 @@ spec:
                   type:
                     description: Type of the condition, currently ('Ready').
                     type: string
-  version: v1alpha2
   versions:
   - name: v1alpha2
     served: true
