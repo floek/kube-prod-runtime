@@ -168,18 +168,18 @@ spec:
     subresources:
       status: {}
     additionalPrinterColumns:
-    - JSONPath: .status.conditions[?(@.type=="Ready")].status
+    - jsonPath: .status.conditions[?(@.type=="Ready")].status
       name: Ready
       type: string
-    - JSONPath: .spec.issuerRef.name
+    - jsonPath: .spec.issuerRef.name
       name: Issuer
       priority: 1
       type: string
-    - JSONPath: .status.conditions[?(@.type=="Ready")].message
+    - jsonPath: .status.conditions[?(@.type=="Ready")].message
       name: Status
       priority: 1
       type: string
-    - JSONPath: .metadata.creationTimestamp
+    - jsonPath: .metadata.creationTimestamp
       description: CreationTimestamp is a timestamp representing the server time when
         this object was created. It is not guaranteed to be set in happens-before order
         across separate operations. Clients may not set this value. It is represented
@@ -407,21 +407,21 @@ spec:
     subresources:
       status: {}
     additionalPrinterColumns:
-    - JSONPath: .status.conditions[?(@.type=="Ready")].status
+    - jsonPath: .status.conditions[?(@.type=="Ready")].status
       name: Ready
       type: string
-    - JSONPath: .spec.secretName
+    - jsonPath: .spec.secretName
       name: Secret
       type: string
-    - JSONPath: .spec.issuerRef.name
+    - jsonPath: .spec.issuerRef.name
       name: Issuer
       priority: 1
       type: string
-    - JSONPath: .status.conditions[?(@.type=="Ready")].message
+    - jsonPath: .status.conditions[?(@.type=="Ready")].message
       name: Status
       priority: 1
       type: string
-    - JSONPath: .metadata.creationTimestamp
+    - jsonPath: .metadata.creationTimestamp
       description: CreationTimestamp is a timestamp representing the server time when
         this object was created. It is not guaranteed to be set in happens-before order
         across separate operations. Clients may not set this value. It is represented
@@ -1801,17 +1801,17 @@ spec:
     subresources:
       status: {}
     additionalPrinterColumns:
-    - JSONPath: .status.state
+    - jsonPath: .status.state
       name: State
       type: string
-    - JSONPath: .spec.dnsName
+    - jsonPath: .spec.dnsName
       name: Domain
       type: string
-    - JSONPath: .status.reason
+    - jsonPath: .status.reason
       name: Reason
       priority: 1
       type: string
-    - JSONPath: .metadata.creationTimestamp
+    - jsonPath: .metadata.creationTimestamp
       description: CreationTimestamp is a timestamp representing the server time when
         this object was created. It is not guaranteed to be set in happens-before order
         across separate operations. Clients may not set this value. It is represented
@@ -3501,14 +3501,14 @@ spec:
     subresources:
       status: {}
     additionalPrinterColumns:
-    - JSONPath: .status.conditions[?(@.type=="Ready")].status
+    - jsonPath: .status.conditions[?(@.type=="Ready")].status
       name: Ready
       type: string
-    - JSONPath: .status.conditions[?(@.type=="Ready")].message
+    - jsonPath: .status.conditions[?(@.type=="Ready")].message
       name: Status
       priority: 1
       type: string
-    - JSONPath: .metadata.creationTimestamp
+    - jsonPath: .metadata.creationTimestamp
       description: CreationTimestamp is a timestamp representing the server time when
         this object was created. It is not guaranteed to be set in happens-before order
         across separate operations. Clients may not set this value. It is represented
@@ -5197,14 +5197,14 @@ spec:
     subresources:
       status: {}
     additionalPrinterColumns:
-    - JSONPath: .status.conditions[?(@.type=="Ready")].status
+    - jsonPath: .status.conditions[?(@.type=="Ready")].status
       name: Ready
       type: string
-    - JSONPath: .status.conditions[?(@.type=="Ready")].message
+    - jsonPath: .status.conditions[?(@.type=="Ready")].message
       name: Status
       priority: 1
       type: string
-    - JSONPath: .metadata.creationTimestamp
+    - jsonPath: .metadata.creationTimestamp
       description: CreationTimestamp is a timestamp representing the server time when
         this object was created. It is not guaranteed to be set in happens-before order
         across separate operations. Clients may not set this value. It is represented
@@ -5393,18 +5393,18 @@ spec:
     subresources:
       status: {}
     additionalPrinterColumns:
-    - JSONPath: .status.state
+    - jsonPath: .status.state
       name: State
       type: string
-    - JSONPath: .spec.issuerRef.name
+    - jsonPath: .spec.issuerRef.name
       name: Issuer
       priority: 1
       type: string
-    - JSONPath: .status.reason
+    - jsonPath: .status.reason
       name: Reason
       priority: 1
       type: string
-    - JSONPath: .metadata.creationTimestamp
+    - jsonPath: .metadata.creationTimestamp
       description: CreationTimestamp is a timestamp representing the server time when
         this object was created. It is not guaranteed to be set in happens-before order
         across separate operations. Clients may not set this value. It is represented
