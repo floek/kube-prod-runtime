@@ -166,7 +166,9 @@
     name_port:: {
       service: {
         name: service.metadata.name,
-        port: service.spec.ports[0].port,
+        port: { 
+          number: service.spec.ports[0].port,
+        },
       },
     },
 
