@@ -29,6 +29,7 @@ spec:
       http:
         paths:
           - path: /
+            pathType: "ImplementationSpecific"
             backend:
               serviceName: echoheaders
               servicePort: 80

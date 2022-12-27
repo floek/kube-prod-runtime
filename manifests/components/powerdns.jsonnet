@@ -178,7 +178,7 @@ local powerdns_sh_tpl = importstr "powerdns/powerdns_sh_tpl";
           host: this.host,
           http: {
             paths: [
-              {path: "/", backend: $.svc.name_port},
+              {path: "/", pathType: "ImplementationSpecific", backend: $.svc.name_port},
             ],
           },
         },

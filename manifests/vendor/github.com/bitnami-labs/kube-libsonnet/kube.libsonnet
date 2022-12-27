@@ -314,7 +314,7 @@
   },
 
   HostPathVolume(path, type=""): {
-    hostPath: { path: path, pathType: type },
+    hostPath: { path: path, type: type },
   },
 
   GitRepoVolume(repository, revision): {

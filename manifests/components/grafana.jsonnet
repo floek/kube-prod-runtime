@@ -69,7 +69,7 @@ local GRAFANA_DATA_MOUNTPOINT = "/opt/bitnami/grafana/data";
           host: this.host,
           http: {
             paths: [
-              {path: "/", backend: $.svc.name_port},
+              {path: "/", pathType: "ImplementationSpecific", backend: $.svc.name_port},
             ],
           },
         },

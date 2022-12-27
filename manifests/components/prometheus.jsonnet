@@ -114,8 +114,8 @@ local get_cm_web_hook_url = function(port, path) (
           host: this.host,
           http: {
             paths: [
-              {path: this.prom_path, backend: $.prometheus.svc.name_port},
-              {path: this.am_path, backend: $.alertmanager.svc.name_port},
+              {path: this.prom_path, pathType: "ImplementationSpecific", backend: $.prometheus.svc.name_port},
+              {path: this.am_path, pathType: "ImplementationSpecific", backend: $.alertmanager.svc.name_port},
             ],
           },
         },

@@ -150,7 +150,7 @@ local strip_trailing_slash(s) = (
           host: this.host,
           http: {
             paths: [
-              {path: this.kibanaPath, backend: $.svc.name_port},
+              {path: this.kibanaPath, pathType: "ImplementationSpecific", backend: $.svc.name_port},
             ],
           },
         },

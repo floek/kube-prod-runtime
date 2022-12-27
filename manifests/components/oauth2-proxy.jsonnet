@@ -81,9 +81,9 @@ local OAUTH2_PROXY_IMAGE = (import "images.json").oauth2_proxy;
         host: this.host,
         http: {
           paths: [
-            {path: "/oauth2/", backend: $.svc.name_port},
+            {path: "/oauth2/", pathType: "ImplementationSpecific", backend: $.svc.name_port},
             // The "/" block is only used for the location regex rewrite
-            {path: "/", backend: $.svc.name_port},
+            {path: "/", pathType: "ImplementationSpecific", backend: $.svc.name_port},
           ],
         },
       }],

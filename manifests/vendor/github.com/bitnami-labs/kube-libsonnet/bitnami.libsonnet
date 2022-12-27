@@ -52,7 +52,7 @@ local perCloudSvcSpec(cloud) = (
     host:: error "host required",
     target_svc:: error "target_svc required",
     // Default to single-service - override if you want something else.
-    paths:: [{ path: "/", backend: ing.target_svc.name_port }],
+    paths:: [{ path: "/", pathType: "ImplementationSpecific", backend: ing.target_svc.name_port }],
     secretName:: "%s-cert" % [ing.metadata.name],
     // cert_provider can either be:
     // - "kcm": DEPRECATED (will be removed in T26526) uses old kube-cert-manager via route53 for ACME dns-01 challenge
