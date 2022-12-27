@@ -163,7 +163,6 @@ spec:
                 failed. This is used to influence garbage collection and back-off.
               type: string
               format: date-time
-  version: v1alpha2
   versions:
   - name: v1alpha2
     served: true
@@ -403,7 +402,6 @@ spec:
                 named by this resource in spec.secretName.
               type: string
               format: date-time
-  version: v1alpha2
   versions:
   - name: v1alpha2
     served: true
@@ -5194,7 +5192,6 @@ spec:
                   type:
                     description: Type of the condition, currently ('Ready').
                     type: string
-  version: v1alpha2
   versions:
   - name: v1alpha2
     served: true
@@ -5391,7 +5388,6 @@ spec:
                 field when the Order is first processed. This field will be immutable
                 after it is initially set.
               type: string
-  version: v1alpha2
   versions:
   - name: v1alpha2
     served: true
