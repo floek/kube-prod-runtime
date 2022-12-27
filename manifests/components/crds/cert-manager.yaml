@@ -13,8 +13,6 @@ spec:
     - crs
     singular: certificaterequest
   scope: Namespaced
-  subresources:
-    status: {}
   validation:
     openAPIV3Schema:
       description: CertificateRequest is a type to represent a Certificate Signing
@@ -167,6 +165,8 @@ spec:
   - name: v1alpha2
     served: true
     storage: true
+    subresources:
+      status: {}
     additionalPrinterColumns:
     - JSONPath: .status.conditions[?(@.type=="Ready")].status
       name: Ready
@@ -202,8 +202,6 @@ spec:
     - certs
     singular: certificate
   scope: Namespaced
-  subresources:
-    status: {}
   validation:
     openAPIV3Schema:
       description: Certificate is a type to represent a Certificate from ACME
@@ -406,6 +404,8 @@ spec:
   - name: v1alpha2
     served: true
     storage: true
+    subresources:
+      status: {}
     additionalPrinterColumns:
     - JSONPath: .status.conditions[?(@.type=="Ready")].status
       name: Ready
@@ -441,8 +441,6 @@ spec:
     plural: challenges
     singular: challenge
   scope: Namespaced
-  subresources:
-    status: {}
   validation:
     openAPIV3Schema:
       description: Challenge is a type to represent a Challenge request with an ACME
@@ -1800,6 +1798,8 @@ spec:
   - name: v1alpha2
     served: true
     storage: true
+    subresources:
+      status: {}
     additionalPrinterColumns:
     - JSONPath: .status.state
       name: State
@@ -1831,8 +1831,6 @@ spec:
     plural: clusterissuers
     singular: clusterissuer
   scope: Cluster
-  subresources:
-    status: {}
   validation:
     openAPIV3Schema:
       type: object
@@ -3500,6 +3498,8 @@ spec:
   - name: v1alpha2
     served: true
     storage: true
+    subresources:
+      status: {}
     additionalPrinterColumns:
     - JSONPath: .status.conditions[?(@.type=="Ready")].status
       name: Ready
@@ -3528,8 +3528,6 @@ spec:
     plural: issuers
     singular: issuer
   scope: Namespaced
-  subresources:
-    status: {}
   validation:
     openAPIV3Schema:
       type: object
@@ -5196,6 +5194,8 @@ spec:
   - name: v1alpha2
     served: true
     storage: true
+    subresources:
+      status: {}
     additionalPrinterColumns:
     - JSONPath: .status.conditions[?(@.type=="Ready")].status
       name: Ready
@@ -5224,8 +5224,6 @@ spec:
     plural: orders
     singular: order
   scope: Namespaced
-  subresources:
-    status: {}
   validation:
     openAPIV3Schema:
       description: Order is a type to represent an Order with an ACME server
@@ -5392,6 +5390,8 @@ spec:
   - name: v1alpha2
     served: true
     storage: true
+    subresources:
+      status: {}
     additionalPrinterColumns:
     - JSONPath: .status.state
       name: State
